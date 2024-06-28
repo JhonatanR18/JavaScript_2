@@ -16,15 +16,7 @@
       <a class="logo" href="../html/index.html">
         <img src="../assets/tiendamia-logo.svg" alt="Logo Store" width="218">
       </a>
-      <div class="social">
-        <ul>
-          <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-          <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="../html/favorites.html"><i class="fa-regular fa-star"></i></a></li>     
-          <li><a href="../html/index.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
-        </ul>
-      </div>
+      <div id="icons" class="social"></div>
     </div>
     <nav id="navbar"></nav>
   </header>
@@ -62,8 +54,13 @@
       </div>
     </div>
   </footer>
-  <script src="../js/layout.js"></script>  
+  <script src="../js/functions/layout.js"></script>   
+  <script src="../js/functions/createCart.js"></script>
+  <script src="../js/functions/printCart.js"></script>
+  <script src="../js/functions/createTotalCart.js"></script>
+  <script src="../js/functions/changeQuantityCart.js"></script>
+  <script src="../js/functions/saveFavorites.js"></script>
   <script src="../js/cart.js"></script>
-  <script src="../js/buy.js"></script>
+  <script src="../js/functions/buy.js"></script>
 </body>
 </html>
