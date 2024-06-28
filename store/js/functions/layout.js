@@ -62,11 +62,14 @@ for ( let optionFooter of optionsFooter){
 function printIcons(){
     return `
     <ul>
-        <li id="iconFb" class="iconFb"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-        <li id="iconIg" class="iconIg"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        <li id="iconCart" class="iconCart"><a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li id="iconFav" class="iconFav"><a href="../html/favorites.html"><i class="fa-regular fa-star"></i></a></li>
-        <li id="iconLogin" class="iconLogin"><a href="../html/index.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+        <li id="iconFb-fixed" class="social-icon hidden"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        <li id="iconIg-fixed" class="social-icon hidden"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li id="iconFb" class="iconFb hidden"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        <li id="iconIg" class="iconIg hidden"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li id="iconCart" class="iconCart hidden"><a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li id="iconFav" class="iconFav hidden"><a href="../html/favorites.html"><i class="fa-regular fa-star"></i></a></li>
+        <li id="iconLogin" class="iconLogin hidden"><a href="../html/index.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+        <li id="iconUser" class="iconUser hidden"><a href="../html/index.html"><i class="fa-solid fa-user-check"></i></a></li>
     </ul>
     `
 }
