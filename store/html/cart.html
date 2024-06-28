@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css..." />
+  <link rel="stylesheet" href="../css/cart.css" />
+  <script src="https://kit.fontawesome.com/e27661fab1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <a class="logo" href="../html/index.html">
+        <img src="../assets/tiendamia-logo.svg" alt="Logo Store" width="218">
+      </a>
+      <div class="social">
+        <ul>
+          <li class="social-icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li class="social-icon"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="../html/favorites.html"><i class="fa-regular fa-star"></i></a></li>     
+          <li><a href="../html/index.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <nav id="navbar"></nav>
+  </header>
+  <section id="hero">
+    <div class="container">
+      <div class="title-container">
+        <span>Mi</span>
+        <span>Carrito</span>
+      </div>
+    </div>
+  </section>
+  <section id="carts">
+    <div class="container">
+      <div class="columns-container">
+        <div id="cart-container"></div>
+        <div class="container-carrito" id="message-cart">
+          <div class="mgs-carrito">
+            <h2 >NO HAY PRODUCTOS EN EL CARRITO</h2>
+          </div>
+        </div>
+        <div id="cart-total"></div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="container">
+      <div id="products" class="product-container"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div id="footer" class="footer-container"></div>
+      <div class="copyright">
+        Curso de HTML + CSS 2024</div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/layout.js"></script>  
+  <script src="../js/cart.js"></script>
+  <script src="../js/buy.js"></script>
+</body>
+</html>
