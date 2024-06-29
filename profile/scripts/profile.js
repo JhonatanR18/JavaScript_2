@@ -1,28 +1,43 @@
-// Definición de variables con información del usuario
-const nombre = "Jhonatan Rivera";
-const edad = 20;
-const profesión = "Administrador de Empresas";
-const país = "Perú";
-const departamento = "Piura"
-const provincia = "Sullana"
+const misDatosFísicos = {
+    nombre: "Jhonatan Rivera",
+    edad: 20, 
+    dirección:{
+        calle: "Madre de Dios",
+        número: "#484",
+        ciudad: "Sullana"
+        },
+    altura: "180 cm",
+    peso:"",
+    hobby: "Dibujar"
+}
+const perfilSelector = document.getElementById('perfil');
+const contenidoPerfil = `
+        <h1>${misDatosFísicos.nombre || "No especificado"}</h1>
+        <p>Edad: ${misDatosFísicos.edad || "No especificado"}</p>
+        <p>Dirección: ${misDatosFísicos.dirección.calle || "No especificado"}, ${misDatosFísicos.dirección.número || "No especificado"}, ${misDatosFísicos.dirección.ciudad || "No especificado"}.</p>
+        <p>Altura: ${misDatosFísicos.altura || "No especificado"}</p>
+        <p>Peso: ${misDatosFísicos.peso || "No especificado"}</p>
+        <p>Hobby: ${misDatosFísicos.hobby || "No especificado"}</p>
+`
+perfilSelector.innerHTML = contenidoPerfil
 
-// Actividad: Implementando la Asignación con AND lógico (&&)
-// Inicializa la variable isOnline como false, representando que el usuario no está conectado inicialmente
-let isOnline = false
-// Utiliza prompt() para preguntar al usuario si está conectado
-// Convierte la respuesta a mayúsculas para evitar problemas de mayúsculas y minúsculas
-const respuesta = prompt(`¿El usuario esta conectado? ¿SI O NO?`).toUpperCase();
-// Verifica la respuesta del usuario
-// Si la respuesta es "SI" y isOnline es false, cambia isOnline a true
-if(respuesta.toUpperCase() === "SI" && !isOnline){
-    isOnline = true;
+// Parámetro id tiene un valor predeterminado de "datos3"
+function printProfile (id = "datos3"){
+    // accede al contenedor <pre> con el id especificado
+    const datos = document.getElementById(id)
+    // template string con los datos del objeto
+    const contenido = `
+        <h1>${misDatosFísicos.nombre || "No especificado"}</h1>
+        <p>Edad: ${misDatosFísicos.edad || "No especificado"}</p>
+        <p>Dirección: ${misDatosFísicos.dirección.calle || "No especificado"}, ${misDatosFísicos.dirección.número || "No especificado"}, ${misDatosFísicos.dirección.ciudad || "No especificado"}.</p>
+        <p>Altura: ${misDatosFísicos.altura || "No especificado"}</p>
+        <p>Peso: ${misDatosFísicos.peso || "No especificado"}</p>
+        <p>Hobby: ${misDatosFísicos.hobby || "No especificado"}</p>
+    `
+     // Asigna el HTML generado a innerHTML del contenedor <pre>
+    datos.innerHTML = contenido
 }
-// Dependiendo del estado de isOnline, muestra un mensaje diferente
-if (isOnline){
-    // Si isOnline es true, muestra una alerta indicando que el usuario está conectado y también se mostrara el template
-    alert(`El usuario esta conectado.`);
-    document.write(`¡Hola Mi nombre es ${nombre}! Tengo ${edad} años de edad, soy de ${país}, ${departamento} - ${provincia}, y actualmente estudiante de la carrera de ${profesión}.`)
-} else{
-    // Si isOnline es false, muestra una alerta indicando que el usuario no está conectado
-    alert(`El usuario no está conectado`)
-}
+// Llama a la función printProfile sin argumentos
+// Imprimirá en "datos3" por defecto
+printProfile()
+// printProfile("datos2")
