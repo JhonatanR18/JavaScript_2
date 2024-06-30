@@ -18,3 +18,14 @@ document.getElementById('hobbies-seleccionados').innerHTML = `
 // objeto con la propiedad hobbies, la cual contendrá un arreglo con todos los hobbies 
 const todos = {hobbies:[...enPareja, ...conAmigos, ...conFamilia]}
 console.log(todos);
+// imprimir en el html
+document.getElementById('todosHobbies').innerHTML = `
+    <p>${todos.hobbies}.</p>
+`
+// variable algunos para crear una copia que incluya el tercer y cuarto hobbit de enPareja y el primero de conAmigos y conFamilia utilizando el operador de propagación (...).
+const algunos = {algunos: [...enPareja.slice(1,3), ...conAmigos.slice(0,1), ...conFamilia.slice(0,1)]}
+// imprimir en el html
+document.getElementById('algunos').innerHTML = `
+<p>${algunos.algunos}.</p>
+`
+console.log(algunos);
