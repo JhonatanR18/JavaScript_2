@@ -1,3 +1,4 @@
+import {formatPrice} from "./formatPrice.js"
 function createFav (product){
     return `
         <article id="cart-products" class="cart">
@@ -17,3 +18,4 @@ function createFav (product){
     </article>
     `
 }
+export {createFav}

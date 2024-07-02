@@ -1,4 +1,6 @@
-function subTotal(event){
+import { formatPrice } from "./formatPrice.js";
+import { products } from "./products.js";
+function subTotal(event, id){
     const cantidadDefinida = event.target.value;
     const product = products.find(each => each.id == id)
     const priceNormalSelector = document.querySelector("#price-nor")
@@ -8,3 +10,4 @@ function subTotal(event){
     const subTotalDes = cantidadDefinida * product.priceWithDiscount
     priceSelector.innerHTML = formatPrice(subTotalDes)
 }
+export{subTotal}

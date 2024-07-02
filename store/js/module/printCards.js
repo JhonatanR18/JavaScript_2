@@ -1,3 +1,4 @@
+import { createCard } from "./productCards.js"
 function printCards(arrayProductos, idSelector) {
     let productsTemplates = ""
     for (const elements of arrayProductos) {
@@ -6,3 +7,5 @@ function printCards(arrayProductos, idSelector) {
     const productSelector = document.getElementById(idSelector)
     productSelector.innerHTML = productsTemplates
 }
+
+export {printCards}

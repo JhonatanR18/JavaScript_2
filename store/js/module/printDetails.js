@@ -1,3 +1,5 @@
+import { products } from "./products.js";
+import { formatPrice } from "./formatPrice.js";
 function printDetails(id){
     const product = products.find(each => each.id === id)
     const priceDiscount = formatPrice(product.priceWithDiscount)
@@ -50,7 +52,7 @@ function printDetails(id){
             </ul>
             <div class="checkout-process">
                 <div class="top">
-                    <input id="quantity-1" type="number" value="1" onchange="subTotal(event)">
+                    <input id="quantity-1" type="number" value="1" onchange="subTotal(event, ${product.id})">
                     <button class="btn-primary">Comprar</button>
                 </div>
                 <div class="bottom">
@@ -63,3 +65,4 @@ function printDetails(id){
     const detailsSelector = document.querySelector("#productDetail")
     detailsSelector.innerHTML = detailsTemplate
 }
+export{printDetails}

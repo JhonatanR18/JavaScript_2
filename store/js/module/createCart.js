@@ -1,3 +1,4 @@
+import { formatPrice } from "./formatPrice.js"
 function createCart (product){
     return `
     <article id="cart-products" class="cart">
@@ -18,5 +19,6 @@ function createCart (product){
             <i class="fa-regular fa-star"></i>
         </div>
     </article>
-    `
-}  
+    `;
+} 
+export {createCart}

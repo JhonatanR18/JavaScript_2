@@ -1,3 +1,4 @@
+import { formatPrice } from "./formatPrice.js";
 function createTotal (arrayOfProducts){
     let total = 0;
     arrayOfProducts.forEach(each => {
@@ -23,3 +24,4 @@ function createTotal (arrayOfProducts){
         `;
     }
 }
+export {createTotal}

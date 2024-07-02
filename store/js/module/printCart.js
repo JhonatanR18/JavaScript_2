@@ -1,6 +1,8 @@
-function printCard(arrayProductsLS, idSelector){
+import { createCart } from "./createCart.js"
+
+function printCart(arrayProductsLS, idSelector){
     let cartTemplates = ""
-    for (elements of arrayProductsLS){
+    for (const elements of arrayProductsLS){
         cartTemplates = cartTemplates + createCart(elements)
     }
     const cartSelector = document.getElementById(idSelector)
@@ -13,3 +15,4 @@ function printCard(arrayProductsLS, idSelector){
         emptyMessage.style.display = 'none';
     }
 }
+export{printCart}

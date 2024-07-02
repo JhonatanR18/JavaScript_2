@@ -1,18 +1,22 @@
+// ProductCart LocalStorage
 let cartProducts = JSON.parse(localStorage.getItem('cart')) || []
-// formatear precios
-function formatPrice(precio){
-    return `S/ ${precio.toLocaleString('es-PE',{
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    })}`
-}
-// layout icons
-let iconsTemplate = printIcons()
-const iconsSelector = document.querySelector('#icons')
-iconsSelector.innerHTML = iconsTemplate
-
+import { printNav, printFooter, printIcons } from "./module/layout.js";
+import { setupEventListeners } from "./module/isOnline.js";
+import { printCart } from "./module/printCart.js";
+import { createTotal } from "./module/createTotalCart.js";
+import { changeQuantity } from "./module/changeQuantityCart.js";
+import { buySelector } from "./module/buy.js";
+import { saveFavorites } from "./module/saveFavorites.js";
+// layout
+printNav()
+printFooter()
+printIcons()
+// isOnline
+setupEventListeners()
 // ----
-printCard(cartProducts, "cart-container")
+printCart(cartProducts, "cart-container")
 createTotal(cartProducts)
 
-
+window.changeQuantity = changeQuantity;
+window.buySelector = buySelector
+window.saveFavorites = saveFavorites

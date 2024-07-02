@@ -34,17 +34,22 @@ function renderIcons () {
         iconUser.classList.add('hidden'); // oculta el icono de user
     }
 }
-// Event listener para el botón de login
-document.getElementById('iconLogin').addEventListener('click', function(){
-    // Cambiar 'isOnline' a 'true' en localStorage al hacer clic en login
-    localStorage.setItem('isOnline', 'true');
-    renderIcons(); // Llamar a renderIcons para actualizar la interfaz
-});
-// Event listener para el botón de usuario
-document.getElementById('iconUser').addEventListener('click', function(){
-    // Cambiar 'isOnline' a 'false' en localStorage al hacer clic en usuario
-    localStorage.setItem('isOnline', 'false');
-    renderIcons(); // Llamar a renderIcons para actualizar la interfaz
-});
-// Llamar a renderIcons inicialmente cuando se carga la página
-document.addEventListener('DOMContentLoaded', renderIcons)
+
+function setupEventListeners(){
+    // Event listener para el botón de login
+    document.getElementById('iconLogin').addEventListener('click', function(){
+        // Cambiar 'isOnline' a 'true' en localStorage al hacer clic en login
+        localStorage.setItem('isOnline', 'true');
+        renderIcons(); // Llamar a renderIcons para actualizar la interfaz
+    });
+    // Event listener para el botón de usuario
+    document.getElementById('iconUser').addEventListener('click', function(){
+        // Cambiar 'isOnline' a 'false' en localStorage al hacer clic en usuario
+        localStorage.setItem('isOnline', 'false');
+        renderIcons(); // Llamar a renderIcons para actualizar la interfaz
+    });
+    // Llamar a renderIcons inicialmente cuando se carga la página
+    document.addEventListener('DOMContentLoaded', renderIcons)
+}
+
+export {setupEventListeners}

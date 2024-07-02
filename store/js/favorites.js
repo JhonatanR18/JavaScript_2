@@ -1,15 +1,12 @@
 let favProducts = JSON.parse(localStorage.getItem('fav')) || []
-console.log(favProducts);
-// formatear precios
-function formatPrice(precio){
-    return `S/ ${precio.toLocaleString('es-PE',{
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    })}`
-}
-// layout icons
-let iconsTemplate = printIcons()
-const iconsSelector = document.querySelector('#icons')
-iconsSelector.innerHTML = iconsTemplate
+import { printNav, printFooter, printIcons } from "./module/layout.js";
+import { setupEventListeners } from "./module/isOnline.js";
+import { printFav } from "./module/printFavorites.js";
+// layout
+printNav()
+printFooter()
+printIcons()
+// isOnline
+setupEventListeners()
 // ----
 printFav(favProducts, "fav-container")

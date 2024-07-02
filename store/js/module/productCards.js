@@ -1,3 +1,4 @@
+import { formatPrice } from "./formatPrice.js";
 function createCard(product) {
     const priceDiscount = formatPrice(product.priceWithDiscount)
     const priceNormal = formatPrice(product.normalPrice)
@@ -19,3 +20,4 @@ function createCard(product) {
         </article>
     `;
 }
+export {createCard}

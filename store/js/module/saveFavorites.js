@@ -1,3 +1,4 @@
+let cartProducts = JSON.parse(localStorage.getItem('cart')) || []
 function saveFavorites(id){
     const product = cartProducts.find(product => product.id == id)
     const favProducts = JSON.parse(localStorage.getItem('fav')) || []
@@ -9,3 +10,4 @@ function saveFavorites(id){
         alert(`${product.title} ya esta en favoritos.`)
     }
 }
+export{saveFavorites}

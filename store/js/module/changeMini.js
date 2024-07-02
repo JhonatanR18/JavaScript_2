@@ -3,3 +3,4 @@ function changeMini(event){
     const bigSelector = document.querySelector("#big-img")
     bigSelector.src = selectedSrc
 }
+export {changeMini}

@@ -1,3 +1,4 @@
+import { products } from "./products.js";
 function saveProduct(id){
     const product = products.find(product => product.id == id)
     const quantity = parseFloat(document.querySelector("#quantity-1").value)
@@ -24,3 +25,4 @@ function saveProduct(id){
     }
     localStorage.setItem('cart',JSON.stringify(cart))
 }
+export{saveProduct}

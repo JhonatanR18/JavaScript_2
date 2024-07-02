@@ -1,6 +1,7 @@
+import { createFav } from "./createFavorites.js"
 function printFav(arrayProductsFav, idSelectorFav){
     let favTemplates = ""
-    for(elements of arrayProductsFav){
+    for(const elements of arrayProductsFav){
         favTemplates = favTemplates + createFav(elements)
     }
     const favSelector = document.getElementById(idSelectorFav)
@@ -13,3 +14,4 @@ function printFav(arrayProductsFav, idSelectorFav){
         emptyMessage.style.display = 'none';
     }
 }
+export{printFav}

@@ -92,7 +92,7 @@ const prod6 = new Product(
     "El Logitech G502 Lightspeed es un mouse gaming inalámbrico de alta precisión, diseñado para ofrecer rendimiento y comodidad sin compromisos. Con el sensor HERO 16K, garantiza un seguimiento ultra preciso para movimientos rápidos y precisos en juegos. Sus 11 botones programables permiten personalizar cada aspecto de tu experiencia de juego. El diseño ergonómico y la conectividad Lightspeed aseguran una respuesta instantánea y fluida, ideal para jugadores exigentes que buscan máximo control y eficiencia.",
     'Incluye impuesto País y percepción AFIP'
 )
-let products = [prod1, prod2, prod3, prod4, prod5, prod6]
+export let products = [prod1, prod2, prod3, prod4, prod5, prod6]
 
 
 

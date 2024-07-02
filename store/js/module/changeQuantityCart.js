@@ -1,3 +1,7 @@
+// ProductCart LocalStorage
+let cartProducts = JSON.parse(localStorage.getItem('cart')) || []
+import { printCart } from "./printCart.js";
+import { createTotal } from "./createTotalCart.js";
 function changeQuantity(event){
     const [id, color] = event.target.id.split("_");
     const quantity = parseInt(event.target.value);
@@ -8,6 +12,7 @@ function changeQuantity(event){
         }
     })
     localStorage.setItem('cart', JSON.stringify(cartProducts))
-    printCard(cartProducts, "cart-container")
+    printCart(cartProducts, "cart-container")
     createTotal(cartProducts)
 }
+export {changeQuantity}
