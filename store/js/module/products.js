@@ -94,5 +94,4 @@ const prod6 = new Product(
 )
 export let products = [prod1, prod2, prod3, prod4, prod5, prod6]
 
-
-
+products.sort((a, b) => a.title.localeCompare(b.title));
