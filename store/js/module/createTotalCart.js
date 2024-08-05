@@ -1,9 +1,7 @@
 import { formatPrice } from "./formatPrice.js";
 function createTotal (arrayOfProducts){
-    let total = 0;
-    arrayOfProducts.forEach(each => {
-        total = total + (each.price * each.quantity)
-    });
+    // funcionalidad para calcular el total a pagar de los productos agregados al carrito. Utiliza el método reduce junto con la callback adecuada para realizar la reducción y sumar el precio de cada producto en el carrito.
+    const total = arrayOfProducts.reduce((sum, each) => sum + (each.price * each.quantity), 0);
     const cartTotal = document.querySelector("#cart-total")
     cartTotal.innerHTML = "";
     if (arrayOfProducts.length > 0 ){
